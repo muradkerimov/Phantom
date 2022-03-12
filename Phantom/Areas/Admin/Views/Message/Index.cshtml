@@ -1,0 +1,14 @@
+﻿@model List<Message>
+<h3>Message</h3>
+@foreach (Message item in @Model)
+{
+    <blockquote>
+        <h4>@item.UserName</h4>
+        <h6 class="half">@item.UserEmail</h6>
+        <h6 class="half">@item.MessageDate</h6>
+        <p>@item.Text</p>
+    </blockquote>
+        <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger">Delete</a>
+
+    <hr/>
+}

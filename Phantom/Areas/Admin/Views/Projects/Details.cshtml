@@ -1,0 +1,12 @@
+﻿@model Project
+<div class="row">
+    <div class="col-md-8">
+            <img src="~/images/@Model.Image" style="width:200px" class="rounded d-block mb-3" />
+        <h4>Title: <b>@Model.Title</b></h4>
+        <h4>SubTitle: <b>@Model.SubTitle</b></h4>
+        <div class="mb-5">
+            @Model.Description
+        </div>
+        <a asp-action="Index" class="btn btn-primary">Go Back</a>
+    </div>
+</div>

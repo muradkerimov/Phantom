@@ -1,0 +1,16 @@
+﻿@model Project
+<div class="row">
+    <div class="col-md-8">
+        <h2 class="text-danger mb-3">Do you surely want to delete this testimonial?</h2>
+
+            <img src="~/images/@Model.Image" style="width:250px" class="rounded d-block mb-3" />
+
+        <h4>Title: <b>@Model.Title</b></h4>
+        <h4>Subtitle: <b>@Model.SubTitle</b></h4>
+        <div class="mb-5">
+            @Model.Description
+        </div>
+        <a asp-action="DeleteConfirmed" asp-route-id="@Model.Id" class="btn btn-danger">Delete</a>
+        <a asp-action="Index" class="btn btn-primary">Go Back</a>
+    </div>
+</div>
